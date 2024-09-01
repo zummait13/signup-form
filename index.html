@@ -4,62 +4,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+    <!-- FONT SETTINGS -->
+    <style>
+        @font-face {
+            font-family: logo-font;
+            src: url(Norse-Bold.otf);
+            font-display: swap;
+        }
+
+        body {
+            max-inline-size: clamp(60, 66, 70);
+            font-family: 'Montserrat', sans-serif;
+            font-display: swap;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 2rem + 0.5vw, 3rem);
+            font-family: 'Oswald', sans-serif;
+            font-weight: 500;
+            margin-bottom: 32px;
+        }
+
+        h2, legend {
+            font-size: clamp(1.3rem, 1.3rem + 0.5vw, 2rem);
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            font-size: clamp(1.1rem, 1.1rem + 0.5vw, 1.5rem);
+            margin-bottom: 16px;
+        }
+
+        p, label, span, a {
+            font-size: clamp(1rem, 1rem + 0.5vw, 1.2rem);
+        }
+
+        .logo-text {
+            font-family: 'logo-font', sans-serif;
+            font-size: clamp(2rem, 3rem + 0.5vw, 4rem);
+            color: white;
+        }
+        
+    </style>
+
+    <link rel="stylesheet" href="style_reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="window">
 
-        <div class="image-section">
+        <div class="image-section" style="background-image: url('blue-bg.jpg')">
             <div class="logo-section">
                 <img src="odin-lined.png" alt="The Odin Project Logo">
+                <p class="logo-text">ODIN</p>
             </div>
 
-            <p>Photo by <a href=""></a> on <a href=""></a></p>
+            <p>Designed by 
+                <a href="https://www.freepik.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer">freepik
+                </a>
+            </p>
         </div>
 
         <div class="content-section">
 
-            <p>This is not a real online service! You know you need something
+            <h1>Sign Up here</h1>
+
+            <h3>
+                This is not a real online service! You know you need something
                 like this in your life to help you realize your deepest dreams.
                 Sign up now to get started.
-            </p>
-            <p>
+            </h3>
+
+            <h3>
                 You know you want to.
-            </p>
+            </h3>
 
-            <div class="form-section">
-                <form action="example.com/path" method="post">
+            <form action="example.com/path" method="post">
                     
-                    <legend>Let's do this!</legend>
+                <legend>Let's do this!</legend>
 
-                    <div class="form-row">
+                <div class="form-row">
+                    <div class="form-cell">
                         <label for="first-name">FIRST NAME</label>
-                        <input type="text" name="user-first-name" id="first-name">
-                        
+                        <input type="text" 
+                                name="user-first-name" 
+                                id="first-name"
+                                pattern="^[^0-9]+$"
+                                required>
+                    </div>    
+
+                    <div class="form-cell">
                         <label for="last-name">LAST NAME</label>
-                        <input type="text" name="user-last-name" id="last-name">
+                        <input type="text" 
+                                name="user-last-name" 
+                                id="last-name"
+                                required>
                     </div>
+                </div>
 
-                    <div class="form-row">
+                <div class="form-row">
+                    <div class="form-cell">
                         <label for="email">EMAIL</label>
-                        <input type="email" name="user-email" id="email">
+                        <input type="email" 
+                                name="user-email" 
+                                id="email"
+                                required>
+                    </div>
                     
+                    <div class="form-cell">
                         <label for="phone-number">PHONE NUMBER</label>
-                        <input type="tel" name="user-phone-number" id="phone-number">
-                    
+                        <input type="tel" 
+                                name="user-phone-number" 
+                                id="phone-number"
+                                required>
                     </div>
-                    <div class="form-row">
+                </div>
+                <div class="form-row">
+                    <div class="form-cell">
                         <label for="password">PASSWORD</label>
-                        <input type="password" name="user-password" id="password">
-                        
-                        <label for="confirm-password">CONFIRM PASSWORD</label>
-                        <input type="password" name="user-confirm-password" id="confirm-password">
+                        <input type="password" 
+                                name="user-password" 
+                                id="password"
+                                required>
                     </div>
+                        
+                    <div class="form-cell">
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" 
+                                name="user-confirm-password" 
+                                id="confirm-password"
+                                required>
+                    </div>
+                </div>
 
-                </form>
-            </div>
+            </form>
 
-            <button>Create Account</button>
+            <button type="submit">Create Account</button>
 
             <div class="login-section">
                 <span>Already have an account?</span>
@@ -67,6 +159,7 @@
             </div>
 
         </div>
+
     </div>
     <script src="script.js"></script>
 </body>

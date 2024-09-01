@@ -1,0 +1,131 @@
+:root {
+    font-size: 16px;
+    --border-color: #d6d9dc;
+    --text-image-color: #fff;
+    --bg-color: #fff;
+    --main-color: rgb(0, 89, 255);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.window {
+    display: flex;
+    height: 100%;
+}
+
+/* IMAGE SECTION */
+.image-section {
+    flex: 1;
+
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo-section {
+    width: 100%;
+    height: 10%;
+    
+    margin-top: 20vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo-section img {
+    max-height: 80%;
+}
+
+.image-section > p {
+    margin-top: auto;
+    color: var(--text-image-color);
+}
+
+.image-section a {
+    color: var(--text-image-color);
+}
+
+/* CONTENT SECTION */
+
+.content-section {
+    padding: 8vw;
+    flex: 2;
+}
+
+
+
+form {
+    background-color: var(--text-image-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+
+    padding: 32px 16px;
+    margin: 32px 0 32px -16px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 32px;
+
+    margin: 0 16px;
+}
+
+.form-cell {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 256px;
+    max-width: 400px;
+}
+
+.form-cell input {
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    background-color: var(--bg-color);
+}
+
+/* .form-cell input:invalid {
+    border: 1px solid red;
+} */
+
+.form-cell input:valid {
+    border: 1px solid green;
+}
+
+
+
+button[type='submit'] {
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    color: var(--text-image-color);
+    background-color: var(--main-color);
+
+    border: 1px solid transparent;
+    border-radius: 3px;
+
+    cursor: pointer;
+    padding: 8px 16px;
+    margin-bottom: 32px;
+}
+
+button[type='submit']:hover {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--main-color);
+}
